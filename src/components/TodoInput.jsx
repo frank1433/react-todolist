@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
-
 function TodoInput(props) {
-
-
     const { handleAddTodos , todoValue, setTodoValue } = props
     return (
         <header>
             <input value={todoValue} onChange={(e) => {
                 setTodoValue(e.target.value)
-            }} placeholder="Enter todo..." />
+            }} placeholder="Enter Todo..." />
             <button onClick={() => {
                 handleAddTodos(todoValue)
                 setTodoValue('')

@@ -12,14 +12,11 @@ function App() {
   }
 
   const handleAddTodos=(newTodo)=>{
-    console.log(newTodo)
     setTodos(prev=>[...prev, newTodo])
   }
 
   function handleDeleteTodo(index) {
-    const newTodoList = todos.filter((todo, todoIndex) => {
-      return todoIndex !== index
-    })
+    const newTodoList = todos.filter((todo, i) => i !== index)
     persistData(newTodoList)
     setTodos(newTodoList)
   }
